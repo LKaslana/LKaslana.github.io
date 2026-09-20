@@ -6,59 +6,60 @@
   <meta name="referrer" content="no-referrer">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Yangcheng Li 的个人主页。北京工业大学与 University College Dublin（UCD）中外合作办学，物联网工程专业。研究兴趣为计算机视觉与具身智能。">
-  <meta name="theme-color" content="#173d70">
+  <meta name="theme-color" content="#000000">
   <title>Yangcheng Li</title>
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23173d70'/%3E%3Cpath d='M20 16L32 32L44 16M32 32V49' fill='none' stroke='white' stroke-width='5'/%3E%3C/svg%3E">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23000000'/%3E%3Cpath d='M20 16L32 32L44 16M32 32V49' fill='none' stroke='white' stroke-width='5'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="./style.css">
   <script src="./site.js" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#main">跳至正文</a>
+  <a class="skip-link" href="#main" data-i18n="skip">跳至正文</a>
   <header class="site-header">
     <div class="header-inner">
-      <a class="wordmark" href="#about" aria-label="Yangcheng Li，返回简介">Yangcheng Li</a>
-      <nav aria-label="主导航">
-        <a href="#about" aria-current="location">简介</a>
-        <a href="#research">研究</a>
-        <a href="#projects">项目</a>
-        <a href="#experience">经历</a>
+      <a class="wordmark" href="#about" aria-label="Yangcheng Li，返回简介" data-i18n-label="homeLabel">Yangcheng Li</a>
+      <nav aria-label="主导航" data-i18n-label="navLabel">
+        <a href="#about" aria-current="location" data-i18n="profile">简介</a>
+        <a href="#research" data-i18n="research">研究</a>
+        <a href="#projects" data-i18n="projectsNav">项目</a>
+        <a href="#experience" data-i18n="experienceNav">经历</a>
       </nav>
+      <button class="language-toggle" id="language-toggle" type="button" lang="en" aria-label="Switch to English" hidden>English</button>
     </div>
   </header>
   <div class="page-layout">
-    <aside class="profile" aria-label="个人信息">
+    <aside class="profile" aria-label="个人信息" data-i18n-label="personalLabel">
       <h1>Yangcheng Li</h1>
-      <div class="profile-study"><p>北京工业大学</p><p>University College Dublin（UCD）</p><p>物联网工程（中外合作办学）</p></div>
-      <div class="profile-interests"><span>计算机视觉</span><span>具身智能</span></div>
+      <div class="profile-study"><p data-i18n="bjut">北京工业大学</p><p data-i18n="ucd">University College Dublin（UCD）</p><p data-i18n="programme">物联网工程（中外合作办学）</p></div>
+      <div class="profile-interests"><span data-i18n="vision">计算机视觉</span><span data-i18n="embodied">具身智能</span></div>
       <div class="profile-contact" id="contact">
-        <p class="eyebrow">联系方式</p>
+        <p class="eyebrow" data-i18n="contact">联系方式</p>
         <a href="mailto:liyangcheng@bjut.edu.cn">liyangcheng@bjut.edu.cn</a>
         <a href="mailto:yangcheng.li@ucdconnect.ie">yangcheng.li@ucdconnect.ie</a>
       </div>
     </aside>
     <main id="main">
       <section id="about" class="about-section" aria-labelledby="about-title">
-        <div class="section-heading"><h2 id="about-title">简介</h2></div>
-        <p>Yangcheng Li，目前就读于北京工业大学与 University College Dublin（UCD）合作办学的物联网工程专业。研究兴趣包括计算机视觉与具身智能。</p>
+        <div class="section-heading"><h2 id="about-title" data-i18n="profile">简介</h2></div>
+        <p data-i18n="bio">Yangcheng Li，目前就读于北京工业大学与 University College Dublin（UCD）合作办学的物联网工程专业。研究兴趣包括计算机视觉与具身智能。</p>
       </section>
       <section id="research" aria-labelledby="research-title">
-        <div class="section-heading"><h2 id="research-title">研究</h2></div>
+        <div class="section-heading"><h2 id="research-title" data-i18n="research">研究</h2></div>
         <div class="research-topics">
-          <div><h3>计算机视觉</h3></div>
-          <div><h3>具身智能</h3></div>
+          <div><h3 data-i18n="vision">计算机视觉</h3></div>
+          <div><h3 data-i18n="embodied">具身智能</h3></div>
         </div>
-        <div class="publication-line"><h3>论文进展</h3><p>论文正在撰写中，尚未投稿。</p></div>
+        <div class="publication-line"><h3 data-i18n="paperHeading">论文进展</h3><p data-i18n="paperStatus">论文正在撰写中，尚未投稿。</p></div>
       </section>
       <section id="projects" aria-labelledby="projects-title">
-        <div class="section-heading"><h2 id="projects-title">项目与作品</h2></div>
-        <p class="project-link"><a href="https://github.com/Yangcheng-Li/BridgeHPE" target="_blank" rel="noopener noreferrer">BridgeHPE（GitHub）</a> · 需访问权限</p>
+        <div class="section-heading"><h2 id="projects-title" data-i18n="projects">项目与作品</h2></div>
+        <p class="project-link"><a href="https://github.com/Yangcheng-Li/BridgeHPE" target="_blank" rel="noopener noreferrer" data-i18n="bridgeLink">BridgeHPE（GitHub）</a> · <span data-i18n="accessRequired">需访问权限</span></p>
       </section>
       <section id="experience" aria-labelledby="experience-title">
-        <div class="section-heading"><h2 id="experience-title">教育与经历</h2></div>
-        <div class="experience-row"><div class="experience-meta">教育经历<span>2024.09 — 至今</span></div><div><h3>北京工业大学</h3><p>University College Dublin（UCD）</p><p>物联网工程（中外合作办学）</p></div></div>
-        <div class="experience-row"><div class="experience-meta">实习经历<span>2026.07.20 — 2026.08.20</span></div><div><h3>云峰基金</h3><p>投资部实习生</p></div></div>
+        <div class="section-heading"><h2 id="experience-title" data-i18n="experience">教育与经历</h2></div>
+        <div class="experience-row"><div class="experience-meta"><span class="experience-kind" data-i18n="education">教育经历</span><span data-i18n="educationDate">2024.09 — 至今</span></div><div><h3 data-i18n="bjut">北京工业大学</h3><p data-i18n="ucd">University College Dublin（UCD）</p><p data-i18n="programme">物联网工程（中外合作办学）</p></div></div>
+        <div class="experience-row"><div class="experience-meta"><span class="experience-kind" data-i18n="internship">实习经历</span><span>2026.07.20 — 2026.08.20</span></div><div><h3 data-i18n="company">云峰基金</h3><p data-i18n="role">投资部实习生</p></div></div>
       </section>
-      <footer><span>© <span id="year">2026</span> Yangcheng Li</span><a href="#about">回到顶部</a></footer>
+      <footer><span>© <span id="year">2026</span> Yangcheng Li</span><a href="#about" data-i18n="backToTop">回到顶部</a></footer>
     </main>
   </div>
 </body>

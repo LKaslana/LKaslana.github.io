@@ -15,3 +15,7 @@
 - Secret Protection、push protection 与私密漏洞报告已启用。请通过仓库 Security 页面报告漏洞。
 - 不提交 API 密钥、私钥或 .env 文件；.gitignore 不能保护已经跟踪或曾公开的秘密。
 - 公开网页及前端源码可以被访问和复制。这些措施不等同于自定义 WAF 或完整防嵌入保护；GitHub Pages 上的 meta CSP 不支持 frame-ancestors。
+
+## 语言与样式
+
+页首支持中英文切换，默认中文并在浏览器本地记住选择。翻译维护于 site.js，新增页面文字应补齐中英文版本。当前为黑色强调色与灰白背景，统一字号和字重。

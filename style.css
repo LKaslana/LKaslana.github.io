@@ -1,23 +1,25 @@
-:root { --ink:#283548; --muted:#52647a; --accent:#173d70; --line:#d5dfec; --soft:#e3ebf6; --background:#edf2f8; font-size:100%; color-scheme:light; }
+:root { --ink:#222; --muted:#606060; --accent:#000; --line:#d8d8d8; --soft:#ededed; --background:#f2f2f2; font-size:100%; color-scheme:light; }
 * { box-sizing:border-box; }
 html { scroll-behavior:smooth; scroll-padding-top:110px; }
 body { margin:0; background:var(--background); color:var(--ink); font-family:"Microsoft YaHei","PingFang SC","Noto Sans CJK SC","Segoe UI",sans-serif; font-size:1rem; font-weight:400; line-height:1.85; -webkit-font-smoothing:antialiased; }
 h1,h2,h3,p { margin:0; font:inherit; }
-a,span,div,nav,footer { font:inherit; }
+a,span,div,nav,footer,button { font:inherit; }
 a { color:inherit; text-decoration:none; }
 a:hover { color:var(--accent); text-decoration:underline; text-underline-offset:5px; }
-a:focus-visible { outline:2px solid var(--accent); outline-offset:5px; }
-::selection { background:#ccdef8; }
+a:focus-visible,button:focus-visible { outline:2px solid var(--accent); outline-offset:5px; }
+::selection { background:#d6d6d6; }
 .skip-link { position:fixed; top:-100px; left:16px; padding:8px 18px; background:var(--accent); color:white; z-index:100; }
 .skip-link:focus { top:8px; }
-.site-header { position:sticky; top:0; z-index:10; background:#f7f9fc; border-top:5px solid var(--accent); border-bottom:1px solid var(--line); }
+.site-header { position:sticky; top:0; z-index:10; background:#fafafa; border-top:5px solid var(--accent); border-bottom:1px solid var(--line); }
 .header-inner { max-width:1180px; margin:0 auto; min-height:74px; padding:0 32px; display:flex; align-items:center; justify-content:space-between; gap:24px; }
 .wordmark { color:var(--accent); }
+.language-toggle { color:var(--accent); background:transparent; border:1px solid var(--line); border-radius:2px; padding:5px 12px; min-height:44px; cursor:pointer; white-space:nowrap; }
+.language-toggle:hover { background:var(--soft); border-color:var(--accent); }
 nav { display:flex; gap:28px; align-items:center; }
 nav a { padding:10px 0; border-bottom:2px solid transparent; white-space:nowrap; }
 nav a[aria-current] { color:var(--accent); border-bottom-color:var(--accent); }
 .page-layout { max-width:1180px; margin:0 auto; display:grid; grid-template-columns:280px minmax(0,1fr); gap:40px; padding:40px 32px; }
-.profile { position:sticky; top:120px; align-self:start; background:#f7f9fc; border:1px solid var(--line); border-top:4px solid var(--accent); padding:24px 20px; }
+.profile { position:sticky; top:120px; align-self:start; background:#fafafa; border:1px solid var(--line); border-top:4px solid var(--accent); padding:24px 20px; }
 .profile-study { margin-top:20px; }
 .profile-study p+p { margin-top:5px; }
 .profile-interests { display:flex; flex-wrap:wrap; gap:6px 14px; color:var(--accent); margin-top:20px; }
@@ -36,6 +38,7 @@ section { padding-bottom:28px; margin-bottom:28px; border-bottom:1px solid var(-
 .experience-row+.experience-row { padding-top:22px; margin-top:22px; border-top:1px solid var(--line); }
 .experience-meta { color:var(--accent); }
 .experience-meta span { display:block; color:var(--muted); margin-top:5px; }
+.experience-meta .experience-kind { color:var(--accent); margin-top:0; }
 .experience-row p { margin-top:5px; }
 section:last-of-type { margin-bottom:0; }
 footer { display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px; padding-top:22px; color:var(--muted); }
@@ -47,14 +50,15 @@ main { padding:22px; }
 .experience-row { grid-template-columns:1fr; gap:10px; }
 }
 @media(max-width:700px) {
-html { scroll-padding-top:138px; }
+html { scroll-padding-top:180px; }
 .header-inner { display:grid; grid-template-columns:1fr auto; padding:10px 20px 0; gap:0; }
-nav { grid-column:1/-1; grid-row:2; justify-content:space-between; gap:10px; }
+nav { grid-column:1/-1; grid-row:2; justify-content:space-between; flex-wrap:wrap; gap:0 16px; }
+.language-toggle { justify-self:end; }
 nav a { padding:11px 0; }
 .page-layout { display:block; padding:24px 16px; }
 .profile { position:static; margin-bottom:24px; padding:20px; }
 .profile-study { margin-top:12px; }
-.profile-contact { scroll-margin-top:138px; }
+.profile-contact { scroll-margin-top:180px; }
 main { padding:20px; }
 .section-heading { margin-bottom:18px; }
 section { margin-bottom:24px; padding-bottom:24px; }
