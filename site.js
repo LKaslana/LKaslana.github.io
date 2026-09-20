@@ -9,12 +9,12 @@ const translations = {
     bjut: '北京工业大学', ucd: 'University College Dublin（UCD）', programme: '物联网工程（中外合作办学）',
     vision: '计算机视觉', embodied: '具身智能', contact: '联系方式',
     bio: 'Yangcheng Li，目前就读于北京工业大学与 University College Dublin（UCD）合作办学的物联网工程专业。研究兴趣包括计算机视觉与具身智能。',
-    paperHeading: '论文进展', paperStatus: '论文正在撰写中，尚未投稿。',
-    projects: '项目与作品', bridgeLink: 'BridgeHPE（GitHub）', accessRequired: '需访问权限',
+    paperHeading: '论文进展', paperStatus: 'waiting...',
+    projects: '项目与作品', bridgeLink: 'BridgeHPE（GitHub）', accessRequired: 'now private',
     experience: '教育与经历', education: '教育经历', educationDate: '2024.09 — 至今',
     internship: '实习经历', company: '云峰基金', role: '投资部实习生', backToTop: '回到顶部',
     steamLabel: '查看 LKaslana 的 Steam 主页，在新标签页打开', steamDescription: 'Steam 社区个人主页', steamVisit: '访问主页 ↗',
-    interests: '个人兴趣', steamCollection: 'Steam 游戏收藏', steamOrder: '按游玩时长排序 · 静态展示',
+    interests: '个人兴趣', steamCollection: 'Steam 游戏收藏', steamOrder: '按游玩时长排序',
     description: 'Yangcheng Li 的个人主页。北京工业大学与 University College Dublin（UCD）中外合作办学，物联网工程专业。研究兴趣为计算机视觉与具身智能。'
   },
   en: {
@@ -23,12 +23,12 @@ const translations = {
     bjut: 'Beijing University of Technology', ucd: 'University College Dublin (UCD)', programme: 'Internet of Things Engineering (joint programme)',
     vision: 'Computer Vision', embodied: 'Embodied Intelligence', contact: 'Contact',
     bio: 'I am studying Internet of Things Engineering through the joint programme offered by Beijing University of Technology and University College Dublin (UCD). My research interests include computer vision and embodied intelligence.',
-    paperHeading: 'Paper status', paperStatus: 'Paper in preparation; not yet submitted.',
-    projects: 'Projects', bridgeLink: 'BridgeHPE (GitHub)', accessRequired: 'Access required',
+    paperHeading: 'Paper status', paperStatus: 'waiting...',
+    projects: 'Projects', bridgeLink: 'BridgeHPE (GitHub)', accessRequired: 'now private',
     experience: 'Education and experience', education: 'Education', educationDate: '2024.09 — Present',
     internship: 'Internship', company: 'Yunfeng Capital', role: 'Intern, Investment Department', backToTop: 'Back to top',
     steamLabel: "View LKaslana's Steam profile (opens in a new tab)", steamDescription: 'Steam Community profile', steamVisit: 'View profile ↗',
-    interests: 'Personal interests', steamCollection: 'Steam collection', steamOrder: 'Ordered by playtime · Static collection',
+    interests: 'Personal interests', steamCollection: 'Steam collection', steamOrder: 'Ordered by playtime',
     description: 'Yangcheng Li — Internet of Things Engineering, joint programme at Beijing University of Technology and University College Dublin (UCD). Research interests: computer vision and embodied intelligence.'
   }
 };
