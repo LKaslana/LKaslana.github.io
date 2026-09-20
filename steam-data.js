@@ -80,13 +80,6 @@ window.steamGameData = {
       "cover": "./assets/steam/271590.jpg"
     },
     {
-      "appid": 431960,
-      "name": "Wallpaper Engine：壁纸引擎",
-      "nameEn": "Wallpaper Engine",
-      "url": "https://store.steampowered.com/app/431960",
-      "cover": "./assets/steam/431960.jpg"
-    },
-    {
       "appid": 292030,
       "name": "巫师 3：狂猎 - 完全版",
       "nameEn": "The Witcher 3: Wild Hunt",
