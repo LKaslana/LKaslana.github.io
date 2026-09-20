@@ -1,0 +1,13 @@
+.sites-runtime/
+.preview/
+*.tar.gz
+*.tar
+work/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+.credentials*

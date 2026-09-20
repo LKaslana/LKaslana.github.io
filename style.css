@@ -16,7 +16,6 @@ a:focus-visible { outline:2px solid var(--accent); outline-offset:5px; }
 nav { display:flex; gap:28px; align-items:center; }
 nav a { padding:10px 0; border-bottom:2px solid transparent; white-space:nowrap; }
 nav a[aria-current] { color:var(--accent); border-bottom-color:var(--accent); }
-.header-contact { white-space:nowrap; }
 .page-layout { max-width:1180px; margin:0 auto; display:grid; grid-template-columns:280px minmax(0,1fr); gap:40px; padding:40px 32px; }
 .profile { position:sticky; top:120px; align-self:start; background:#f7f9fc; border:1px solid var(--line); border-top:4px solid var(--accent); padding:24px 20px; }
 .profile-study { margin-top:20px; }
@@ -31,7 +30,8 @@ section { padding-bottom:28px; margin-bottom:28px; border-bottom:1px solid var(-
 .research-topics { display:flex; gap:16px 32px; flex-wrap:wrap; }
 .publication-line { margin-top:20px; }
 .publication-line p { margin-top:6px; color:var(--muted); }
-.empty-note { color:var(--muted); }
+.project-link { color:var(--muted); }
+.project-link a { color:var(--accent); text-decoration:underline; text-underline-offset:4px; }
 .experience-row { display:grid; grid-template-columns:170px minmax(0,1fr); gap:20px; }
 .experience-row+.experience-row { padding-top:22px; margin-top:22px; border-top:1px solid var(--line); }
 .experience-meta { color:var(--accent); }
