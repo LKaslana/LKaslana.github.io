@@ -40,6 +40,27 @@ section { padding-bottom:28px; margin-bottom:28px; border-bottom:1px solid var(-
 .experience-meta span { display:block; color:var(--muted); margin-top:5px; }
 .experience-meta .experience-kind { color:var(--accent); margin-top:0; }
 .experience-row p { margin-top:5px; }
+.steam-card { display:flex; align-items:center; gap:20px; padding:20px; border:1px solid var(--line); background:#fafafa; }
+.steam-card:hover { background:var(--soft); border-color:var(--accent); text-decoration:none; }
+.steam-avatar { display:block; width:88px; height:88px; flex-shrink:0; object-fit:cover; border:1px solid var(--line); }
+.steam-profile-copy { display:block; flex:1; min-width:0; }
+.steam-profile-copy>span { display:block; }
+.steam-description { margin-top:5px; color:var(--muted); }
+.steam-visit { text-decoration:underline; text-underline-offset:4px; }
+.steam-games { margin-top:24px; }
+.steam-games summary { cursor:pointer; padding:12px 16px; border:1px solid var(--line); background:var(--soft); }
+.steam-games summary:hover { border-color:var(--accent); }
+.steam-games summary:focus-visible { outline:2px solid var(--accent); outline-offset:4px; }
+.steam-games[open] summary { margin-bottom:16px; }
+.steam-order,.steam-game-rank { color:var(--muted); }
+.steam-order { margin-top:6px; }
+.steam-games-list { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:20px 16px; list-style:none; padding:0; margin:20px 0 0; }
+.steam-games-list li { min-width:0; }
+.steam-game-card { display:block; height:100%; background:#fafafa; border:1px solid var(--line); }
+.steam-game-card:hover { border-color:var(--accent); text-decoration:none; }
+.steam-game-card img { display:block; width:100%; height:auto; aspect-ratio:460/215; object-fit:cover; }
+.steam-game-caption { display:flex; align-items:baseline; gap:8px; padding:10px; overflow-wrap:anywhere; }
+.steam-game-rank { flex-shrink:0; }
 section:last-of-type { margin-bottom:0; }
 footer { display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px; padding-top:22px; color:var(--muted); }
 @media(max-width:950px) {
@@ -48,6 +69,7 @@ footer { display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px; 
 .profile { padding:20px 16px; }
 main { padding:22px; }
 .experience-row { grid-template-columns:1fr; gap:10px; }
+.steam-games-list { grid-template-columns:repeat(2,minmax(0,1fr)); }
 }
 @media(max-width:700px) {
 html { scroll-padding-top:180px; }
@@ -62,6 +84,10 @@ nav a { padding:11px 0; }
 main { padding:20px; }
 .section-heading { margin-bottom:18px; }
 section { margin-bottom:24px; padding-bottom:24px; }
+.steam-card { display:grid; grid-template-columns:64px minmax(0,1fr); gap:10px 16px; padding:16px; }
+.steam-avatar { width:64px; height:64px; grid-column:1; grid-row:1/3; align-self:start; }
+.steam-profile-copy { grid-column:2; }
+.steam-visit { grid-column:2; }
 }
 @media(max-width:360px) {
 main { padding:16px; }

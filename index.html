@@ -10,6 +10,7 @@
   <title>Yangcheng Li</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23000000'/%3E%3Cpath d='M20 16L32 32L44 16M32 32V49' fill='none' stroke='white' stroke-width='5'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="./style.css">
+  <script src="./steam-data.js" defer></script>
   <script src="./site.js" defer></script>
 </head>
 <body>
@@ -58,6 +59,19 @@
         <div class="section-heading"><h2 id="experience-title" data-i18n="experience">教育与经历</h2></div>
         <div class="experience-row"><div class="experience-meta"><span class="experience-kind" data-i18n="education">教育经历</span><span data-i18n="educationDate">2024.09 — 至今</span></div><div><h3 data-i18n="bjut">北京工业大学</h3><p data-i18n="ucd">University College Dublin（UCD）</p><p data-i18n="programme">物联网工程（中外合作办学）</p></div></div>
         <div class="experience-row"><div class="experience-meta"><span class="experience-kind" data-i18n="internship">实习经历</span><span>2026.07.20 — 2026.08.20</span></div><div><h3 data-i18n="company">云峰基金</h3><p data-i18n="role">投资部实习生</p></div></div>
+      </section>
+      <section id="steam" aria-labelledby="steam-title">
+        <div class="section-heading"><h2 id="steam-title" data-i18n="interests">个人兴趣</h2></div>
+        <a class="steam-card" href="https://steamcommunity.com/id/LKaslana/" target="_blank" rel="noopener noreferrer" aria-label="查看 LKaslana 的 Steam 主页，在新标签页打开" data-i18n-label="steamLabel">
+          <img class="steam-avatar" src="./assets/steam-avatar.jpg" width="88" height="88" alt="" loading="lazy" decoding="async">
+          <span class="steam-profile-copy"><span>LKaslana</span><span class="steam-description" data-i18n="steamDescription">Steam 社区个人主页</span></span>
+          <span class="steam-visit" data-i18n="steamVisit">访问主页 ↗</span>
+        </a>
+        <details class="steam-games" id="steam-games" hidden>
+          <summary><span data-i18n="steamCollection">Steam 游戏收藏</span> <span id="steam-game-count">（26）</span></summary>
+          <p class="steam-order" data-i18n="steamOrder">按游玩时长排序 · 静态展示</p>
+          <ol class="steam-games-list" id="steam-games-list"></ol>
+        </details>
       </section>
       <footer><span>© <span id="year">2026</span> Yangcheng Li</span><a href="#about" data-i18n="backToTop">回到顶部</a></footer>
     </main>

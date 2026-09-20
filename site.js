@@ -13,6 +13,8 @@ const translations = {
     projects: '项目与作品', bridgeLink: 'BridgeHPE（GitHub）', accessRequired: '需访问权限',
     experience: '教育与经历', education: '教育经历', educationDate: '2024.09 — 至今',
     internship: '实习经历', company: '云峰基金', role: '投资部实习生', backToTop: '回到顶部',
+    steamLabel: '查看 LKaslana 的 Steam 主页，在新标签页打开', steamDescription: 'Steam 社区个人主页', steamVisit: '访问主页 ↗',
+    interests: '个人兴趣', steamCollection: 'Steam 游戏收藏', steamOrder: '按游玩时长排序 · 静态展示',
     description: 'Yangcheng Li 的个人主页。北京工业大学与 University College Dublin（UCD）中外合作办学，物联网工程专业。研究兴趣为计算机视觉与具身智能。'
   },
   en: {
@@ -25,6 +27,8 @@ const translations = {
     projects: 'Projects', bridgeLink: 'BridgeHPE (GitHub)', accessRequired: 'Access required',
     experience: 'Education and experience', education: 'Education', educationDate: '2024.09 — Present',
     internship: 'Internship', company: 'Yunfeng Capital', role: 'Intern, Investment Department', backToTop: 'Back to top',
+    steamLabel: "View LKaslana's Steam profile (opens in a new tab)", steamDescription: 'Steam Community profile', steamVisit: 'View profile ↗',
+    interests: 'Personal interests', steamCollection: 'Steam collection', steamOrder: 'Ordered by playtime · Static collection',
     description: 'Yangcheng Li — Internet of Things Engineering, joint programme at Beijing University of Technology and University College Dublin (UCD). Research interests: computer vision and embodied intelligence.'
   }
 };
@@ -48,7 +52,47 @@ function applyLanguage(language) {
   languageToggle.textContent = language === 'en' ? '中文' : 'English';
   languageToggle.lang = language === 'en' ? 'zh-CN' : 'en';
   languageToggle.setAttribute('aria-label', language === 'en' ? '切换为中文' : 'Switch to English');
+  renderSteamGames(language);
   updateNavigation();
+}
+function renderSteamGames(language) {
+  const container = document.getElementById('steam-games');
+  const list = document.getElementById('steam-games-list');
+  const snapshot = window.steamGameData;
+  const games = Array.isArray(snapshot?.games) ? snapshot.games.filter(game =>
+    typeof game.name === 'string' && /^https:\/\/store\.steampowered\.com\/app\/\d+\/?$/.test(game.url) &&
+    /^\.\/assets\/steam\/\d+\.jpg$/.test(game.cover)
+  ) : [];
+  container.hidden = games.length === 0;
+  document.getElementById('steam-game-count').textContent = language === 'en' ? `(${games.length})` : `（${games.length}）`;
+  list.replaceChildren();
+  for (const [index, game] of games.entries()) {
+    const row = document.createElement('li');
+    const link = document.createElement('a');
+    link.className = 'steam-game-card';
+    link.href = game.url;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    const cover = document.createElement('img');
+    cover.src = game.cover;
+    cover.width = 460;
+    cover.height = 215;
+    cover.alt = '';
+    cover.loading = 'lazy';
+    cover.decoding = 'async';
+    const rank = document.createElement('span');
+    rank.className = 'steam-game-rank';
+    rank.textContent = String(index + 1).padStart(2, '0');
+    rank.setAttribute('aria-hidden', 'true');
+    const details = document.createElement('div');
+    details.className = 'steam-game-caption';
+    const title = document.createElement('span');
+    title.textContent = language === 'en' && game.nameEn ? game.nameEn : game.name;
+    details.append(rank, title);
+    link.append(cover, details);
+    row.append(link);
+    list.append(row);
+  }
 }
 languageToggle.addEventListener('click', () => {
   currentLanguage = currentLanguage === 'en' ? 'zh-CN' : 'en';
